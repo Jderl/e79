@@ -17,8 +17,20 @@ class CategoryController extends Controller
         //$categories = Category::all();
 
         //lastest query builder
-        $categories = DB::table("categories")->latest()->get();
-        return view("admin.category.index",compact("categories"));
+        //$categories = DB::table("categories")->latest()->get();
+        //return view("admin.category.index",compact("categories"));
+
+        //paganation eloquent
+        //$categories = Category::latest()->paginate(4);
+        //return view("admin.category.index", compact("categories"));;
+
+        //query builder
+        $categories = DB::table("categories")
+            ->join('users','categories.user_id','users.id')
+            ->select('categories.*','users.name')
+            ->latest()->paginate(4);
+        return view("admin.category.index", compact("categories"));;
+
     }
 
 

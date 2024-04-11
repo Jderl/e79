@@ -14,4 +14,11 @@ class Category extends Model
         'user_id',
         'cateogry_name'
     ];
+
+    // Accessing Relationship to another table
+    //eloquent
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }
