@@ -57,6 +57,20 @@ Route::middleware([
         return view('dashboard', compact('users'));
     })->name('dashboard');
 });
-
+//Categories
 Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
-Route::post('/Category/add', [CategoryController::class, 'AddCat'])->name('store.category');
+//Insertion
+Route::post('/category/add', [CategoryController::class, 'AddCat'])->name('store.category');
+
+//Edit
+//Use url because they are not using name ->
+Route::get('/category/edit/{id}', [CategoryController::class, 'Edit']);
+//Edit update function routes
+Route::post('/category/update/{id}', [CategoryController::class, 'Update']);
+
+//soft deletion
+Route::get('/softdelete/category/{id}', [CategoryController::class, 'SoftDelete']);
+//retore
+Route::get('/category/retore/{id}', [CategoryController::class, 'Restore']);
+//permanent deletion
+Route::get('/delete/category/{id}', [CategoryController::class, 'Deleted']);
