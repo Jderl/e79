@@ -12,15 +12,16 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    {{-- Dashboard --}}
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('services') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Services') }}
                     </x-nav-link>
-                    {{-- <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('') }}
-                    </x-nav-link> --}}
+                    <x-nav-link href="{{ route('all.category') }}">
+                        {{ __('Categories') }}
+                    </x-nav-link>
                 </div>
             </div>
 

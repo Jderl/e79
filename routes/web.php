@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ServicesController;
 // From Models User Php  [Eloquent Style]
 use App\Models\User;  
@@ -54,7 +54,9 @@ Route::middleware([
 
         //Query Builder
         $users=DB::table('users')->get();
-
         return view('dashboard', compact('users'));
     })->name('dashboard');
 });
+
+Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
+Route::post('/Category/add', [CategoryController::class, 'AddCat'])->name('store.category');
