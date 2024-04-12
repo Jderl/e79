@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ba5c914d8c010559eef3e98691d0957",
+    "content-hash": "3cab2cec2f34d94e8185c5f5f92fb1cb",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -6183,6 +6183,50 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "artchik/make-model-singular",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artchik/make-model-singular.git",
+                "reference": "f438bfa2034a4a3473f79af54e7b963cb2390c10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artchik/make-model-singular/zipball/f438bfa2034a4a3473f79af54e7b963cb2390c10",
+                "reference": "f438bfa2034a4a3473f79af54e7b963cb2390c10",
+                "shasum": ""
+            },
+            "type": "command",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Artchik\\MakeModelSingular\\MakeModelSingularServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Artchik\\MakeModelSingular\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artur Charukhchyan",
+                    "email": "artur.charukhchyan@gmail.com"
+                }
+            ],
+            "description": "Singular Table Name \"Make Model\" Artisan Command",
+            "support": {
+                "issues": "https://github.com/artchik/make-model-singular/issues",
+                "source": "https://github.com/artchik/make-model-singular/tree/master"
+            },
+            "time": "2020-05-04T00:58:14+00:00"
+        },
         {
             "name": "fakerphp/faker",
             "version": "v1.23.1",
